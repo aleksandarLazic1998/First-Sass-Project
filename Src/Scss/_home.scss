@@ -1,3 +1,4 @@
+
 .home {
     height: 100%;
     padding-top: 40vh;
@@ -9,7 +10,7 @@
             rgba($primary-color, 0.7),
             rgba($primary-color, 0)),
         url(../../Public/assets/aleksandar.jpg)left top;
-    background-size: cover;
+    background-size:cover;
 
     &__name {
         font-size: 5rem;
