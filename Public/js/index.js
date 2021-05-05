@@ -9,14 +9,19 @@ const menuNav = document.querySelector('.menu-nav');
 // Targeting DOM elements that have class 
 const navItems = document.querySelectorAll('.menu-nav__item');
 
+// Targeting DOM element with class year
+const year = document.getElementById('year');
+
+// Set the year to update on the copyRight part 
+let date = new Date();
+let time = date.getFullYear();
+year.innerHTML = time;
 
 let showMenu = false;
-
 // Adding Event listeners to Menu Button
 menuBtn.addEventListener('click', toggleMenu, false);
 
-
-// Function Toggle Menu Add class to menu-btn element if its clicked its going to do rotate animation
+// Function Toggle menu Add class to menu-btn element if its clicked its going to do rotate animation
 function toggleMenu() {
     if (!showMenu) {
         hamburger.classList.add('open');
