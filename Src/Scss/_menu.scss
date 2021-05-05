@@ -79,21 +79,41 @@
         transform: translateY(-100%);
         @include transition-ease;
 
+        //When menu-nav have open class it should have position that it have from begining
         &.open {
             transform: translateY(0);
         }
 
-        &__item{
+        &__item {
             transform: translateX(100vw);
             @include transition-ease;
 
-            &.open{
+            &.open {
                 transform: translateX(0);
             }
 
-            &.active>a{
+            &.active>a {
                 color: $secondary-color;
             }
         }
+
+        &__link {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .menu-nav__item:nth-child(#{$i}) {
+        // For each li element to ease in in to the page 
+        transition-delay: ($i * 0.1s) + 0.15s;
     }
 }

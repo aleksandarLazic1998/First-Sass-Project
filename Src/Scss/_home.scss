@@ -10,13 +10,15 @@
             rgba($primary-color, 0.7),
             rgba($primary-color, 0)),
         url(../../Public/assets/aleksandar.jpg)left top;
-    background-size:cover;
-//( & === parent element )| in scss we can nest html elements and with & we are selecting parent element (in this case its shorthand for .home)
+    background-size: cover;
+
+    //( & === parent element )| in scss we can nest html elements and with & we are selecting parent element (in this case its shorthand for .home)
     &__name {
         font-size: 5rem;
         padding-bottom: 1rem;
         margin-top: 1rem;
         border-bottom: 2px solid setTextColor($primary-color);
+
         // Because we are nesting in .home__name, & is short for (.home__name--last)
         &--last {
             color: $secondary-color;
